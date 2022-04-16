@@ -4,12 +4,9 @@ const jest = require('jest');
 const generateHtml = require('./functions')
 const employeeData = require('./employee')
 
-
-
-
 class internQuestion extends promptQuestions {
 
-    getManagerData() {
+    getInternData() {
         const internQuestion = 
         inquirer.prompt([
         {
@@ -18,7 +15,7 @@ class internQuestion extends promptQuestions {
             message: 'Please enter your school name.',
         },
     ])
-    //   return `${this.getDate()}-${months[this.getMonth()]}-${this.getFullYear()}`;
+        return     //`${this.getDate()}-${months[this.getMonth()]}-${this.getFullYear()}`;
     }
   
   }
