@@ -3,7 +3,15 @@ const inquirer = require('inquirer');
 const jest = require('jest');
 const generateHtml = require('.');
 
-const promptQuestions = () => {
+
+// function employeeData (answers) {
+//     let name = name;
+//     let id = id;
+//     let email = email
+
+// }
+
+const EmployeeQuestions = () => {
     return inquirer.prompt([
         {
             type: 'input',
@@ -40,30 +48,125 @@ const promptQuestions = () => {
 
     .then(data => {
        const results = generateHtml(data)
-       fs.writeFileSync("./dest/team.html", results)
+       fs.writeFileSync("./dist/team.html", results)
     })
 };
 
-class managerQuestion extends promptQuestions {
+const ManagerQuestions = () => {
+    return inquirer.prompt([
+        {
+            type: 'input',
+            name: 'name',
+            message: 'Please enter your first and last name.',
+        },
+        {
+            type: 'input',
+            name: 'id',
+            message: 'Please enter your employee ID.',
+        },
+      
+        {
+            type: 'input',
+            name: 'email',
+            message: 'Please enter your email address.',
+        },
+        {
+            type: 'input',
+            name: 'manager',
+            message: 'Are you a Manager?',
+        },
+        {
+            type: 'input',
+            name: 'number',
+            message: 'Please enter your office number',
+        },
+    ])
+
+    .then(data => {
+       const results = generateHtml(data)
+       fs.writeFileSync("./dist/team.html", results)
+    })
+};
+const EngineerQuestions = () => {
+    return inquirer.prompt([
+        {
+            type: 'input',
+            name: 'name',
+            message: 'Please enter your first and last name.',
+        },
+        {
+            type: 'input',
+            name: 'id',
+            message: 'Please enter your employee ID.',
+        },
+      
+        {
+            type: 'input',
+            name: 'email',
+            message: 'Please enter your email address.',
+        },
+        {
+            type: 'input',
+            name: 'engineer',
+            message: 'Please enter your GitHub username',
+        },
+    ])
+
+    .then(data => {
+       const results = generateHtml(data)
+       fs.writeFileSync("./dist/team.html", results)
+    })
+};
+const InternQuestions = () => {
+    return inquirer.prompt([
+        {
+            type: 'input',
+            name: 'name',
+            message: 'Please enter your first and last name.',
+        },
+        {
+            type: 'input',
+            name: 'id',
+            message: 'Please enter your employee ID.',
+        },
+      
+        {
+            type: 'input',
+            name: 'email',
+            message: 'Please enter your email address.',
+        },
+        {
+            type: 'input',
+            name: 'school',
+            message: 'Please enter your school',
+        },
+    ])
+
+    .then(data => {
+       const results = generateHtml(data)
+       fs.writeFileSync("./dist/team.html", results)
+    })
+};
+class ManagerQuestion extends EmployeeQuestions {
 
     getManagerData(answers) {
-        const managerQuestion =
+        const ManagerQuestion = 
     inquirer.prompt([
     {
         type: 'input',
-        name: 'office',
+        name: 'number',
         message: 'Please enter your office number.',
     },
 ])
-    return
+    return 
 
     }
 }
 
-class engineerQuestion extends promptQuestions{
+class EngineerQuestion extends EmployeeQuestions{
     
     getEngineerData () {
-        const engineerQuestion =
+        const EngineerQuestion =
     inquirer.prompt([
     {
         type: 'input',
@@ -71,14 +174,14 @@ class engineerQuestion extends promptQuestions{
         message: 'Please enter your GitHub username.',
     },
 ])
-    return
+    return 
     }
 }
 
-class internQuestion extends promptQuestions{
+class InternQuestion extends EmployeeQuestions{
     
     getInternData () {
-        const internQuestion =
+        const InternQuestion =
     inquirer.prompt([
     {
         type: 'input',
@@ -86,20 +189,20 @@ class internQuestion extends promptQuestions{
         message: 'Please enter your school name.',
     },
 ])
-    return
+    return 
     }
 }
 
 const init = () => {
     console.log(data)
     
-     fs.writeFileSync("./dest/team.html", generateHtml)
+     fs.writeFileSync("./dist/team.html", generateHtml)
  }
 
-promptQuestions();
+EmployeeQuestions();
 getManagerData();
 getEngineerData();
 getInternData();
 init();
 
-module.exports = promptQuestions
+module.exports = EmployeeQuestions
