@@ -1,10 +1,3 @@
-const fs = require('fs');
-const inquirer = require('inquirer');
-const jest = require('jest');
-const functions = require('./functions')
-
-var myArr = [];
-var newManager = {};
 
 function generateHtml(answers) {
     return `<!DOCTYPE html>
