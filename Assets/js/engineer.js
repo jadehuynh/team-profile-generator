@@ -11,7 +11,7 @@ class EngineerData extends EmployeeData {
         return this.github
     }
     getRole() {
-        return "engineer"
+        return "Engineer"
     }
 }
 

@@ -2,7 +2,7 @@ const EngineerData = require('../Assets/js/engineer')
 
 describe("EngineerQuestions", () => {
   it("return the engineer name", () => {
-    var engineer = new EngineerData ("Jade", "10", "jadehuynh08@gmail.com","Engineer", "jadehuynh")
+    var engineer = new EngineerData ("Jade", "20", "jadehuynh08@gmail.com","Engineer", "jadehuynh")
    
       var engineerName = engineer.getName()
       
@@ -14,47 +14,47 @@ describe("EngineerQuestions", () => {
 
 describe("EngineerQuestions", () => {
   it("return the engineer id", () => {
-    var employee = new EmployeeData ("Jade", "10", "jadehuynh08@gmail.com","Engineer", "jadehuynh")
+    var engineer = new EngineerData ("Jade", "20", "jadehuynh08@gmail.com", "Engineer", "jadehuynh")
    
-      var employeeName = employee.getId()
+      var engineerId = engineer.getId()
       
-      expect(employeeName).toBe("jadehuynh08@gmail.com")
+      expect(engineerId).toBe("20")
     
   })
   
 });
 
 describe("EngineerQuestions", () => {
-  it("return the employee id ", () => {
-    var employee = new EmployeeData ("Jade", "10", "jadehuynh08@gmail.com","Engineer", "jadehuynh")
+  it("return the engineer id ", () => {
+    var engineer = new EngineerData ("Jade", "20", "jadehuynh08@gmail.com", "Engineer", "jadehuynh")
    
-      var employeeName = employee.getId()
+      var engineerName = engineer.getEmail()
       
-      expect(employeeName).toBe("10")
+      expect(engineerName).toBe("jadehuynh08@gmail.com")
     
   })
   
 });
 
 describe("EngineerQuestions", () => {
-  it("return the employee email", () => {
-    var employee = new EmployeeData ("Jade", "10", "jadehuynh08@gmail.com", "Engineer", "jadehuynh")
+  it("return the engineer role", () => {
+    var engineer = new EngineerData ("Jade", "20", "jadehuynh08@gmail.com", "Engineer", "jadehuynh")
    
-      var employeeName = employee.getEmail()
+      var engineerName = engineer.getRole()
       
-      expect(employeeName).toBe("jadehuynh08@gmail.com")
+      expect(engineerName).toBe("Engineer")
     
   })
   
 });
 
 describe("EngineerQuestions", () => {
-  it("return the employee role", () => {
-    var employee = new EmployeeData ("Jade", "10", "jadehuynh08@gmail.com", "Engineer", "jadehuynh")
+  it("return the github username", () => {
+    var engineer = new EngineerData ("Jade", "20", "jadehuynh08@gmail.com", "Engineer", "jadehuynh")
    
-      var employeeName = employee.getRole()
+      var engineerName = engineer.getGithub()
       
-      expect(employeeName).toBe("employee")
+      expect(engineerName).toBe("jadehuynh")
     
   })
   
