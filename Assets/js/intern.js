@@ -8,10 +8,10 @@ class InternData extends EmployeeData {
         this.school = school
     }
     getSchool() {
-        this.school = school
+       return this.school
     }
     getRole() {
-        return "intern"
+        return "Intern"
     }
     
 }

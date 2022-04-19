@@ -8,10 +8,10 @@ class ManagerData extends EmployeeData {
         this.number = number
         }
         getNumber() {
-            this.number = number
+            return this.number
         }
         getRole() {
-            return "manager"
+            return "Manager"
         }
 }
 
