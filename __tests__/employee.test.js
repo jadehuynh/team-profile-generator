@@ -3,7 +3,7 @@ const EmployeeData = require('../Assets/js/employee');
 
 describe("EmployeeQuestions", () => {
   it("return the employee name", () => {
-    var employee = new EmployeeData ("Jade", "10", "jadehuynh08@gmail.com", "employee")
+    var employee = new EmployeeData ("Jade", "10", "jadehuynh08@gmail.com", "Employee")
    
       var employeeName = employee.getName()
       
@@ -14,36 +14,36 @@ describe("EmployeeQuestions", () => {
 });
 
 describe("EmployeeQuestions", () => {
-  it("return the employee name", () => {
-    var employee = new EmployeeData ("Jade", "10", "jadehuynh08@gmail.com", "employee")
+  it("return the employee id ", () => {
+    var employee = new EmployeeData ("Jade", "10", "jadehuynh08@gmail.com", "Employee")
    
-      var employeeName = employee.getName()
+      var employeeId = employee.getId()
       
-      expect(employeeName).toBe("Jade")
+      expect(employeeId).toBe("10")
     
   })
   
 });
 
 describe("EmployeeQuestions", () => {
-  it("return the employee name", () => {
-    var employee = new EmployeeData ("Jade", "10", "jadehuynh08@gmail.com", "employee")
+  it("return the employee email", () => {
+    var employee = new EmployeeData ("Jade", "10", "jadehuynh08@gmail.com", "Employee")
    
-      var employeeName = employee.getName()
+      var employeeEmail = employee.getEmail()
       
-      expect(employeeName).toBe("Jade")
+      expect(employeeEmail).toBe("jadehuynh08@gmail.com")
     
   })
   
 });
 
 describe("EmployeeQuestions", () => {
-  it("return the employee name", () => {
-    var employee = new EmployeeData ("Jade", "10", "jadehuynh08@gmail.com", "employee")
+  it("return the employee role", () => {
+    var employee = new EmployeeData ("Jade", "10", "jadehuynh08@gmail.com", "Employee")
    
-      var employeeName = employee.getName()
+      var employeeRole = employee.getRole()
       
-      expect(employeeName).toBe("Jade")
+      expect(employeeRole).toBe("employee")
     
   })
   
