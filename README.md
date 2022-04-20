@@ -14,7 +14,7 @@ Passed tests shows the accurate functionality of the code in displaying the data
 
 
 ----
-### [Live Video Demo]()
+### [Live Video Demo](https://youtu.be/eEECT8nilrs)
 ----
 ### [GitHub Link](https://jadehuynh.github.io/team-profile-generator/)
 
