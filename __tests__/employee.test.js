@@ -43,7 +43,7 @@ describe("EmployeeQuestions", () => {
    
       var employeeRole = employee.getRole()
       
-      expect(employeeRole).toBe("employee")
+      expect(employeeRole).toBe("Employee")
     
   })
   
