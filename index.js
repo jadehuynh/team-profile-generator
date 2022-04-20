@@ -17,7 +17,7 @@ const ManagerQuestions = () => {
         {
             type: 'input',
             name: 'id',
-            message: 'Please enter your ID.',
+            message: 'Please enter your employee ID.',
         },
       
         {
@@ -152,48 +152,45 @@ const populate = (data) => {
         console.log(data[i])
         if(data[i].role === "Manager") {
             var card = `
-            <div class="card1" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
+            <div class="card1 border border-4 border-primary m-3" style="width: 18rem;">
             <div class="card-body">
-              <h5 class="card-title">${data[i].name}</h5>
-              <h5>${data[i].role}</h5>
+              <h5 class="card-title text-success">Name: ${data[i].name}</h5>
+              <h5 class="text-warning">Role: ${data[i].role}</h5>
             </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">An item</li>
-              <li class="list-group-item">A second item</li>
-              <li class="list-group-item">A third item</li>
+            <ul class="list-group list-group-flush  mx-auto">
+              <li class="list-group-item">Employee ID: ${data[i].id}</li>
+              <li class="list-group-item">Email: ${data[i].email}</li>
+              <li class="list-group-item">Office Number: ${data[i].number}</li>
             </ul>
             </div>
             `
             cardContainer.push(card)
         }else if(data[i].role === "Engineer") {
             var card = `
-            <div class="card1" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
+            <div class="card1 border border-4 border-primary m-3" style="width: 18rem;">
             <div class="card-body">
-              <h5 class="card-title">${data[i].name}</h5>
-              <h5>${data[i].role}</h5>
+              <h5 class="card-title text-success">Name: ${data[i].name}</h5>
+              <h5 class="text-warning">Role: ${data[i].role}</h5>
             </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">An item</li>
-              <li class="list-group-item">A second item</li>
-              <li class="list-group-item">A third item</li>
+            <ul class="list-group list-group-flush  mx-auto">
+              <li class="list-group-item">Employee ID: ${data[i].id}</li>
+              <li class="list-group-item">Email: ${data[i].email}</li>
+              <li class="list-group-item">GitHub Link: <a href="https://github.com/${data[i].github}">https://github.com/${data[i].github}</a></li>
             </ul>
             </div>
             `
             cardContainer.push(card)
         }else{
             var card = `
-            <div class="card1" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
+            <div class="card1 border border-4 border-primary m-3" style="width: 18rem;">
             <div class="card-body">
-              <h5 class="card-title">${data[i].name}</h5>
-              <h5>${data[i].role}</h5>
+              <h5 class="card-title text-success">Name: ${data[i].name}</h5>
+              <h5 class="text-warning">Role: ${data[i].role}</h5>
             </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">An item</li>
-              <li class="list-group-item">A second item</li>
-              <li class="list-group-item">A third item</li>
+            <ul class="list-group list-group-flush  mx-auto">
+              <li class="list-group-item">Employee ID: ${data[i].id}</li>
+              <li class="list-group-item">Email: ${data[i].email}</li>
+              <li class="list-group-item">School: ${data[i].school}</li>
             </ul>
             </div>
             `
@@ -224,7 +221,7 @@ const generateHtml = (data) => {
     </div>
     </nav>
 
-    <div class="container">
+    <div class="row container d-flex justify-content-center mx-auto">
         ${populate(data)}
     </div>
     </body>
